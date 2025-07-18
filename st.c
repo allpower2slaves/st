@@ -1035,6 +1035,11 @@ ttywrite(const char *s, size_t n, int may_echo)
 	}
 }
 
+int tisaltscr(void)
+{
+	return IS_SET(MODE_ALTSCREEN);
+}
+
 void
 ttywriteraw(const char *s, size_t n)
 {
